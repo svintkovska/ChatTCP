@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatServerConsole", "ChatServerConsole\ChatServerConsole.csproj", "{EA95F872-7410-4479-B454-E36F666501E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatClientWPF", "ChatClientWPF\ChatClientWPF.csproj", "{FDD17E8C-748D-4D6F-9304-4F8D7FE35F45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA95F872-7410-4479-B454-E36F666501E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA95F872-7410-4479-B454-E36F666501E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA95F872-7410-4479-B454-E36F666501E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA95F872-7410-4479-B454-E36F666501E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDD17E8C-748D-4D6F-9304-4F8D7FE35F45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDD17E8C-748D-4D6F-9304-4F8D7FE35F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDD17E8C-748D-4D6F-9304-4F8D7FE35F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDD17E8C-748D-4D6F-9304-4F8D7FE35F45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F7BD900-DE90-4088-8BB8-B394341EABCD}
+	EndGlobalSection
+EndGlobal
