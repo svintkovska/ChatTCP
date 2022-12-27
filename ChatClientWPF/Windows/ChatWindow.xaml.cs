@@ -144,6 +144,8 @@ namespace ChatClientWPF.Windows
             ns.Write(buffer);
             client.Client.Shutdown(SocketShutdown.Send);
             client.Close();
+            ns.Close();
+
         }
         private void btnPhotoSelect_Click(object sender, RoutedEventArgs e)
         {

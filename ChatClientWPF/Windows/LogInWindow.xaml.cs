@@ -28,7 +28,7 @@ namespace ChatClientWPF.Windows
 
         private void logInBtn_Click(object sender, RoutedEventArgs e)
         {
-            UserDTO tempUser = _userService.SearchUser(email_tb.Text, password_tb.Text);
+            UserDTO tempUser = _userService.SearchUser(email_tb.Text, MD5Encryptor.EncryptPassword(password_tb.Text, "my salt"));
             if (tempUser != null)
             {
                 ChatWindow chatWindow = new ChatWindow(tempUser);

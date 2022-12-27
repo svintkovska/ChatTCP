@@ -2,6 +2,7 @@
 using BLL.Services;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -34,7 +35,7 @@ namespace ChatClientWPF.Windows
                 {
                     Name = nameTB.Text,
                     Email = emailTB.Text,
-                    Password = passwordTB.Text
+                    Password = MD5Encryptor.EncryptPassword(passwordTB.Text, "my salt")
                 };
                 _userService.Create(tempUser);
                 ChatWindow chatWindow = new ChatWindow(tempUser);
@@ -43,6 +44,6 @@ namespace ChatClientWPF.Windows
             }
             else
                 MessageBox.Show("Error with password confirmation");
-        }
+        }       
     }
 }
