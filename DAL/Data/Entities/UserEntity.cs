@@ -17,8 +17,5 @@ namespace SomeeMSSQLConsole.Data.Entities
         public string Password { get; set; }
         [Required, StringLength(100)]
         public string Name { get; set; }
-
-       
-
     }
 }
