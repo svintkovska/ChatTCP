@@ -5,7 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatClientWPF.Windows"
         mc:Ignorable="d"
-        Title="LogInWindow" Height="450" Width="800">
+        Title="Log In" Height="350" Width="700">
+    <Window.Background>
+        <ImageBrush ImageSource="https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg" Stretch="Uniform"></ImageBrush>
+    </Window.Background>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="HotPink"></Setter>
+            <Setter Property="BorderBrush" Value="Purple"></Setter>
+            <Setter Property="BorderThickness" Value="3"></Setter>
+            <Setter Property="Height" Value="50"></Setter>
+            <Setter Property="Width" Value="150"></Setter>
+            <Setter Property="Margin" Value="50, 10, 10, 10"></Setter>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="40"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Padding" Value="10, 2"></Setter>
+            <Setter Property="Background" Value="Transparent"></Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -16,13 +41,16 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="1.5*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2"
+                   Foreground="HotPink" FontSize="30" FontWeight="Bold"
+                   VerticalAlignment="Center" HorizontalAlignment="Center">Log In</TextBlock>
         <Label Grid.Row="1" Grid.Column="1">Email:</Label>
         <Label Grid.Row="2" Grid.Column="1">Password:</Label>
-        <TextBox Grid.Row="1" Grid.Column="2" x:Name="email_tb"></TextBox>
+        <TextBox Grid.Row="1" Grid.Column="2" x:Name="email_tb">fagg</TextBox>
         <TextBox Grid.Row="2" Grid.Column="2" x:Name="password_tb"></TextBox>
-        <Button Grid.Row="3" Grid.Column="1" x:Name="logInBtn" Click="logInBtn_Click">Log In</Button>
+        <Button Grid.Row="3" Grid.Column="2" x:Name="logInBtn" Click="logInBtn_Click">Log In</Button>
     </Grid>
 </Window>

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DAL.Migrations
 {
-    public partial class addtblMessages : Migration
+    public partial class afterdrop : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

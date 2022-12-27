@@ -128,7 +128,13 @@ namespace ChatClientWPF.Windows
             _message.Text = txtText.Text;
             var buffer = _message.Serialize();
             ns.Write(buffer); //відправляємо на сервер текст
-
+            _messageService.Create(new MessageDTO
+            {
+                Time = DateTime.Now,
+                Text = txtText.Text,
+                //UserId = _userDTO.Id,
+                User = _userDTO
+            });
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

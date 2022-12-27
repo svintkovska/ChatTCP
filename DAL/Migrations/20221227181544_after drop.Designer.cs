@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(AppEFContext))]
-    [Migration("20221227112357_add tblMessages")]
-    partial class addtblMessages
+    [Migration("20221227181544_after drop")]
+    partial class afterdrop
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

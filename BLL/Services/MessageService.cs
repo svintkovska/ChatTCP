@@ -63,7 +63,7 @@ namespace BLL.Services
                     Id = messageEntity.Id,
                     Time = messageEntity.Time,
                     Text = messageEntity.Text,
-                    UserId = messageEntity.UserId,
+                    //UserId = messageEntity.UserId,
                     User = new UserDTO()
                     {
                         Id = messageEntity.User.Id,
@@ -83,7 +83,7 @@ namespace BLL.Services
                     Id = messageDTO.Id,
                     Time = messageDTO.Time,
                     Text = messageDTO.Text,
-                    UserId = messageDTO.UserId,
+                    //UserId = messageDTO.UserId,
                     User = new UserEntity()
                     {
                         Id = messageDTO.User.Id,
