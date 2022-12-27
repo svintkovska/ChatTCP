@@ -1,4 +1,5 @@
 ﻿using ChatClientWPF.dto;
+using ChatClientWPF.Windows;
 using Microsoft.Win32;
 using Newtonsoft.Json;
 using System;
@@ -30,6 +31,18 @@ namespace ChatClientWPF
         public MainWindow()
         {
             InitializeComponent();
-        }            
+        }
+
+        private void LogIn_btn_Click(object sender, RoutedEventArgs e)
+        {
+            LogInWindow logInWindow = new LogInWindow();
+            logInWindow.ShowDialog();
+        }
+
+        private void register_btn_Click(object sender, RoutedEventArgs e)
+        {
+            RegisterWindow registerWindow = new RegisterWindow();
+            registerWindow.ShowDialog();
+        }
     }
 }

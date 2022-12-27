@@ -25,7 +25,7 @@
         <Button x:Name="btnPhotoSelect" Width="130" Height="40" Margin="425,-95,0,0" FontSize="13" Click="btnPhotoSelect_Click">Вибрати фото...</Button>
 
         <Label Content="Ім'я" HorizontalAlignment="Left" Margin="480,134,0,0" VerticalAlignment="Top" Foreground="DeepSkyBlue"/>
-        <TextBox Name="txtUserName" HorizontalAlignment="Left" Margin="460,171,0,0" Text="Таня" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <TextBox Name="txtUserName" IsEnabled="False" HorizontalAlignment="Left" Margin="460,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
         <Button Name="btnConnect" Content="Connect" HorizontalAlignment="Left" Margin="470,218,0,0" VerticalAlignment="Top" Height="46" Width="128" Click="btnConnect_Click"
                 IsEnabled="False"/>
     </Grid>

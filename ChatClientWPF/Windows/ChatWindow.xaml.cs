@@ -1,4 +1,6 @@
-﻿using ChatClientWPF.dto;
+﻿using BLL.Models;
+using BLL.Services;
+using ChatClientWPF.dto;
 using Microsoft.Win32;
 using Newtonsoft.Json;
 using System;
@@ -24,14 +26,19 @@ namespace ChatClientWPF.Windows
     /// </summary>
     public partial class ChatWindow : Window
     {
+        private UserDTO _userDTO;
+        private MessageService _messageService;
         TcpClient client = new TcpClient();
         NetworkStream ns;
         Thread thread;
         ChatMessage _message = new ChatMessage();
         string base64Image;
-        public ChatWindow()
+        public ChatWindow(UserDTO user)
         {
             InitializeComponent();
+            _userDTO = user;
+            txtUserName.Text = _userDTO.Name;
+            _messageService = new MessageService();
         }
 
         private void btnConnect_Click(object sender, RoutedEventArgs e)
@@ -59,8 +66,6 @@ namespace ChatClientWPF.Windows
 
                 bntSend.IsEnabled = true;
                 btnConnect.IsEnabled = false;
-                txtUserName.IsEnabled = false;
-
                 _message.Text = "Приєднався в чат";
                 var buffer = _message.Serialize();
                 ns.Write(buffer);

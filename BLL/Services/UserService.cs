@@ -35,7 +35,10 @@ namespace BLL.Services
                 return TranslateUserEntityToUserDTO(_userRepository.Find(id));
             return null;
         }
-
+        public UserDTO SearchUser(string email, string password)
+        {
+            return TranslateUserEntityToUserDTO(_userRepository.Find(email, password));
+        }
         public IList<UserDTO> GetAll()
         {
             var list = new List<UserDTO>();

@@ -29,6 +29,6 @@
         <TextBox Grid.Row="2" Grid.Column="2" x:Name="emailTB"></TextBox>
         <TextBox Grid.Row="3" Grid.Column="2" x:Name="passwordTB"></TextBox>
         <TextBox Grid.Row="4" Grid.Column="2" x:Name="confirmPassTB"></TextBox>
-        <Button Grid.Row="5" Grid.Column="1" x:Name="registerBtn">Register</Button>
+        <Button Grid.Row="5" Grid.Column="1" x:Name="registerBtn" Click="registerBtn_Click">Register</Button>
     </Grid>
 </Window>

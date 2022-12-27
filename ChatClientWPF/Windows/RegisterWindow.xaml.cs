@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL.Models;
+using BLL.Services;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,9 +19,30 @@ namespace ChatClientWPF.Windows
     /// </summary>
     public partial class RegisterWindow : Window
     {
+        private UserService _userService;
         public RegisterWindow()
         {
             InitializeComponent();
+            _userService = new UserService();
+        }
+
+        private void registerBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (passwordTB.Text == confirmPassTB.Text)
+            {
+                UserDTO tempUser = new UserDTO()
+                {
+                    Name = nameTB.Text,
+                    Email = emailTB.Text,
+                    Password = passwordTB.Text
+                };
+                _userService.Create(tempUser);
+                ChatWindow chatWindow = new ChatWindow(tempUser);
+                chatWindow.ShowDialog();
+                this.Close();
+            }
+            else
+                MessageBox.Show("Error with password confirmation");
         }
     }
 }

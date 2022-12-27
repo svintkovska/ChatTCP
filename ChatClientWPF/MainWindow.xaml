@@ -26,7 +26,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" Grid.ColumnSpan="2">Welcome to ChatBox</TextBlock>
-        <Button Grid.Row="1" Grid.Column="0" x:Name="LogIn_btn">Log In</Button>
-        <Button Grid.Row="1" Grid.Column="1" x:Name="register_btn">Register</Button>
+        <Button Grid.Row="1" Grid.Column="0" x:Name="LogIn_btn" Click="LogIn_btn_Click">Log In</Button>
+        <Button Grid.Row="1" Grid.Column="1" x:Name="register_btn" Click="register_btn_Click">Register</Button>
     </Grid>
 </Window>
