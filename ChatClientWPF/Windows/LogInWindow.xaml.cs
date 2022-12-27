@@ -28,12 +28,12 @@ namespace ChatClientWPF.Windows
 
         private void logInBtn_Click(object sender, RoutedEventArgs e)
         {
-            UserDTO tempUser = _userService.SearchUser(email_tb.Text, MD5Encryptor.EncryptPassword(password_tb.Text, "my salt"));
+            UserDTO tempUser = _userService.SearchUser(email_tb.Text, MD5Encryptor.EncryptPassword(password_tb.Password, "my salt"));
             if (tempUser != null)
             {
+                this.Close();
                 ChatWindow chatWindow = new ChatWindow(tempUser);
                 chatWindow.ShowDialog();
-                this.Close();
             }
             else
             {
@@ -45,7 +45,7 @@ namespace ChatClientWPF.Windows
         {
             if (String.IsNullOrEmpty(email_tb.Text))
                 logInBtn.IsEnabled = false;
-            else if (String.IsNullOrEmpty(password_tb.Text))
+            else if (String.IsNullOrEmpty(password_tb.Password))
                 logInBtn.IsEnabled = false;
             else
                 logInBtn.IsEnabled = true;

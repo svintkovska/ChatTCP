@@ -30,6 +30,13 @@
             <Setter Property="Padding" Value="10, 2"></Setter>
             <Setter Property="Background" Value="Transparent"></Setter>
         </Style>
+        <Style TargetType="PasswordBox">
+            <Setter Property="Height" Value="40"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Padding" Value="10, 2"></Setter>
+            <Setter Property="Background" Value="Transparent"></Setter>
+        </Style>
     </Window.Resources>
     <Grid MouseMove="Grid_MouseMove">
         <Grid.RowDefinitions>
@@ -50,7 +57,7 @@
         <Label Grid.Row="1" Grid.Column="1">Email:</Label>
         <Label Grid.Row="2" Grid.Column="1">Password:</Label>
         <TextBox Grid.Row="1" Grid.Column="2" x:Name="email_tb"></TextBox>
-        <TextBox Grid.Row="2" Grid.Column="2" x:Name="password_tb"></TextBox>
+        <PasswordBox Grid.Row="2" Grid.Column="2" x:Name="password_tb" MaxLength="25" PasswordChar="*"></PasswordBox>
         <Button Grid.Row="3" Grid.Column="2" x:Name="logInBtn" Click="logInBtn_Click">Log In</Button>
     </Grid>
 </Window>

@@ -30,18 +30,18 @@ namespace ChatClientWPF.Windows
 
         private void registerBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (passwordTB.Text == confirmPassTB.Text)
+            if (passwordTB.Password == confirmPassTB.Password)
             {
                 UserDTO tempUser = new UserDTO()
                 {
                     Name = nameTB.Text,
                     Email = emailTB.Text,
-                    Password = MD5Encryptor.EncryptPassword(passwordTB.Text, "my salt")
+                    Password = MD5Encryptor.EncryptPassword(passwordTB.Password, "my salt")
                 };
                 _userService.Create(tempUser);
+                this.Close();
                 ChatWindow chatWindow = new ChatWindow(tempUser);
                 chatWindow.ShowDialog();
-                this.Close();
             }
             else
                 MessageBox.Show("Error with password confirmation");
@@ -56,9 +56,9 @@ namespace ChatClientWPF.Windows
                 registerBtn.IsEnabled = false;
             else if (!validateEmailRegex.IsMatch(emailTB.Text))
                 registerBtn.IsEnabled = false;
-            else if (String.IsNullOrEmpty(passwordTB.Text))
+            else if (String.IsNullOrEmpty(passwordTB.Password))
                 registerBtn.IsEnabled = false;
-            else if (String.IsNullOrEmpty(confirmPassTB.Text))
+            else if (String.IsNullOrEmpty(confirmPassTB.Password))
                 registerBtn.IsEnabled = false;
             else
                 registerBtn.IsEnabled = true;

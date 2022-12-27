@@ -30,6 +30,13 @@
             <Setter Property="Padding" Value="10, 2"></Setter>
             <Setter Property="Background" Value="Transparent"></Setter>
         </Style>
+        <Style TargetType="PasswordBox">
+            <Setter Property="Height" Value="40"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Padding" Value="10, 2"></Setter>
+            <Setter Property="Background" Value="Transparent"></Setter>
+        </Style>
     </Window.Resources>
     <Grid MouseMove="Grid_MouseMove">
         <Grid.RowDefinitions>
@@ -52,8 +59,11 @@
         <Label Grid.Row="4" Grid.Column="1">Confirm Password:</Label>
         <TextBox Grid.Row="1" Grid.Column="2" x:Name="nameTB"></TextBox>
         <TextBox Grid.Row="2" Grid.Column="2" x:Name="emailTB"></TextBox>
-        <TextBox Grid.Row="3" Grid.Column="2" x:Name="passwordTB"></TextBox>
-        <TextBox Grid.Row="4" Grid.Column="2" x:Name="confirmPassTB"></TextBox>
+        <PasswordBox Grid.Row="3" Grid.Column="2" x:Name="passwordTB" MaxLength="25" PasswordChar="*"></PasswordBox>
+        <!--<TextBox Grid.Row="3" Grid.Column="2" x:Name="passwordTB"></TextBox>-->
+        <!--<TextBox Grid.Row="4" Grid.Column="2" x:Name="confirmPassTB"></TextBox>-->
+        <PasswordBox Grid.Row="4" Grid.Column="2" x:Name="confirmPassTB" MaxLength="25" PasswordChar="*"></PasswordBox>
+
         <Button Grid.Row="5" Grid.Column="2" x:Name="registerBtn" Click="registerBtn_Click">Register</Button>
     </Grid>
 </Window>
