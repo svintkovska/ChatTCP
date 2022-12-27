@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33122.133
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33027.164
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatServerConsole", "ChatServerConsole\ChatServerConsole.csproj", "{EA95F872-7410-4479-B454-E36F666501E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatServerConsole", "ChatServerConsole\ChatServerConsole.csproj", "{EA95F872-7410-4479-B454-E36F666501E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatClientWPF", "ChatClientWPF\ChatClientWPF.csproj", "{FDD17E8C-748D-4D6F-9304-4F8D7FE35F45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatClientWPF", "ChatClientWPF\ChatClientWPF.csproj", "{FDD17E8C-748D-4D6F-9304-4F8D7FE35F45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{EE57807C-9603-45E7-973A-D57E382ED755}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{E160B728-3875-4658-AB9C-663179A85CA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{FDD17E8C-748D-4D6F-9304-4F8D7FE35F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDD17E8C-748D-4D6F-9304-4F8D7FE35F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDD17E8C-748D-4D6F-9304-4F8D7FE35F45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE57807C-9603-45E7-973A-D57E382ED755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE57807C-9603-45E7-973A-D57E382ED755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE57807C-9603-45E7-973A-D57E382ED755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE57807C-9603-45E7-973A-D57E382ED755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E160B728-3875-4658-AB9C-663179A85CA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E160B728-3875-4658-AB9C-663179A85CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E160B728-3875-4658-AB9C-663179A85CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E160B728-3875-4658-AB9C-663179A85CA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -81,7 +81,6 @@ namespace ChatClientWPF
             NetworkStream ns = client.GetStream();
             var receiveBytes = new byte[16054400];
             int byte_count;
-            string data = "";
             while((byte_count = ns.Read(receiveBytes)) > 0)
             {
                 Dispatcher.BeginInvoke(new Action(() =>
