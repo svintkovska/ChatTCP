@@ -31,7 +31,7 @@
             <Setter Property="Background" Value="Transparent"></Setter>
         </Style>
     </Window.Resources>
-    <Grid>
+    <Grid MouseMove="Grid_MouseMove">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>

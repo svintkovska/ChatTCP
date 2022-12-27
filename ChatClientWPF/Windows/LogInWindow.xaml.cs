@@ -40,5 +40,15 @@ namespace ChatClientWPF.Windows
                 MessageBox.Show("Incorrect login or password");
             }
         }
+
+        private void Grid_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (String.IsNullOrEmpty(email_tb.Text))
+                logInBtn.IsEnabled = false;
+            else if (String.IsNullOrEmpty(password_tb.Text))
+                logInBtn.IsEnabled = false;
+            else
+                logInBtn.IsEnabled = true;
+        }
     }
 }

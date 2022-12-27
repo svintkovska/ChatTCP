@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -44,6 +45,23 @@ namespace ChatClientWPF.Windows
             }
             else
                 MessageBox.Show("Error with password confirmation");
-        }       
+        }
+        private readonly Regex validateEmailRegex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+
+        private void Grid_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (String.IsNullOrEmpty(nameTB.Text))
+                registerBtn.IsEnabled = false;
+            else if (String.IsNullOrEmpty(emailTB.Text))
+                registerBtn.IsEnabled = false;
+            else if (!validateEmailRegex.IsMatch(emailTB.Text))
+                registerBtn.IsEnabled = false;
+            else if (String.IsNullOrEmpty(passwordTB.Text))
+                registerBtn.IsEnabled = false;
+            else if (String.IsNullOrEmpty(confirmPassTB.Text))
+                registerBtn.IsEnabled = false;
+            else
+                registerBtn.IsEnabled = true;
+        }
     }
 }
