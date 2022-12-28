@@ -18,7 +18,6 @@ namespace DAL.Data.Entities
         public string Text { get; set; }
         [ForeignKey("User")]
         public int UserId { get; set; }
-        [Required]
         public virtual UserEntity User { get; set; }
 
     }

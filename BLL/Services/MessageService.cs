@@ -63,14 +63,7 @@ namespace BLL.Services
                     Id = messageEntity.Id,
                     Time = messageEntity.Time,
                     Text = messageEntity.Text,
-                    //UserId = messageEntity.UserId,
-                    User = new UserDTO()
-                    {
-                        Id = messageEntity.User.Id,
-                        Name = messageEntity.User.Name,
-                        Email = messageEntity.User.Email,
-                        Password = messageEntity.User.Password
-                    }
+                    UserId = messageEntity.UserId
                 };
             return null;
         }
@@ -83,14 +76,7 @@ namespace BLL.Services
                     Id = messageDTO.Id,
                     Time = messageDTO.Time,
                     Text = messageDTO.Text,
-                    //UserId = messageDTO.UserId,
-                    User = new UserEntity()
-                    {
-                        Id = messageDTO.User.Id,
-                        Name = messageDTO.User.Name,
-                        Email = messageDTO.User.Email,
-                        Password = messageDTO.User.Password
-                    }
+                    UserId = messageDTO.UserId                 
                 };
 
             return null;

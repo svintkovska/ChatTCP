@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Data.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -17,5 +18,6 @@ namespace SomeeMSSQLConsole.Data.Entities
         public string Password { get; set; }
         [Required, StringLength(100)]
         public string Name { get; set; }
+        public virtual ICollection<MessageEntity> Messages { get; set; }
     }
 }

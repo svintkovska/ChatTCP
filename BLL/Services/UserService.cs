@@ -17,7 +17,9 @@ namespace BLL.Services
         {
             if (item != null)
             {
-                _userRepository.Create(TranslateUserDTOToUserEntity(item));
+                var user = TranslateUserDTOToUserEntity(item);
+                _userRepository.Create(user);
+                item.Id = user.Id;
             }
         }
 
@@ -63,7 +65,6 @@ namespace BLL.Services
             if (userDTO != null)
                 return new UserEntity()
                 {
-                    Id = userDTO.Id,
                     Name = userDTO.Name,
                     Email = userDTO.Email,
                     Password = userDTO.Password                  

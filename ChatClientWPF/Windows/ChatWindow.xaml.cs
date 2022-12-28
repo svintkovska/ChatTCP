@@ -132,8 +132,7 @@ namespace ChatClientWPF.Windows
             {
                 Time = DateTime.Now,
                 Text = txtText.Text,
-                //UserId = _userDTO.Id,
-                User = _userDTO
+                UserId = _userDTO.Id
             });
         }
 
